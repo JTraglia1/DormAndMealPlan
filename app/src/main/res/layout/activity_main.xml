@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/**
+*  The activity_main.xml file contains the elements and attributes associated with
+*  various components of the Dorm and Meal Plan Calculator application. This application
+*  utilizes a constraint layout, spinner elements, textview elements, a button element,
+*  vertical guidelines, and horizontal guidelines.
+*
+*  @author Joseph Traglia
+*
+*/-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/dormsSpinner"
+        android:layout_width="142dp"
+        android:layout_height="22dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:entries="@array/spn_dorms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectADormTextView" />
+
+    <TextView
+        android:id="@+id/selectADormTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_dormSelection"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline"
+        app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline" />
+
+    <TextView
+        android:id="@+id/selectAMealPlanTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_mealPlanSelection"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline"
+        app:layout_constraintStart_toStartOf="@+id/rightVerticalGuideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="52dp" />
+
+    <Spinner
+        android:id="@+id/mealsSpinner"
+        android:layout_width="199dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/spn_mealPlans"
+        app:layout_constraintStart_toStartOf="@+id/rightVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/selectAMealPlanTextView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftVerticalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightVerticalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/costAmountTextView"
+        android:layout_width="83dp"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:text="@string/str_cost"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218" />
+
+    <Button
+        android:id="@+id/calculateCostButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_calculateCost"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.317" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="641dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

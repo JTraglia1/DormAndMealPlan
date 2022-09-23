@@ -1,0 +1,28 @@
+<!--/**
+*  The strings.xml file is a resource that contains an identifier for all
+*  strings and spinners (arrays) utilized in the activity_main.xml file.
+*
+*  @author Joseph Traglia
+*
+*/-->
+<resources>
+    <!--Define Resource identifiers-->
+    <string name="app_name">Dorm And Meal Plan - JT</string>
+    <string name="str_dormSelection">Select a Dorm</string>
+    <string name="str_mealPlanSelection">Select a Meal Plan</string>
+    <string name="str_cost">Cost: $0.00</string>
+    <string name="str_calculateCost">Calculate Cost</string>
+    <string-array name="spn_dorms">
+        <item>None</item>
+        <item>Allen Hall</item>
+        <item>Pike Hall</item>
+        <item>Farthing Hall</item>
+        <item>University Suites</item>
+    </string-array>
+    <string-array name="spn_mealPlans">
+        <item>None</item>
+        <item>7 meals per week</item>
+        <item>14 meals per week</item>
+        <item>Unlimited meals per week</item>
+    </string-array>
+</resources>
